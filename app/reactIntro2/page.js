@@ -1,9 +1,10 @@
 "use client"
+import styles from "../../lib/styles/IntroStyles.module.css"
 
 // example component:
 function Square() {
 	return (
-		<div className = "w-10 h-10 border-black border-2 "> 
+		<div className = {styles.square}> 
 		</div>
 	)
 }
@@ -14,7 +15,7 @@ function Board() {
 	return (
 		<div>
 			{/* first row */}
-			<div className = "flex flex-row" >
+			<div className = {styles.squareContainer} >
 				<Square />
 				<Square />
 				<Square />

@@ -1,5 +1,6 @@
 "use client"
 
+import styles from "../../lib/styles/IntroStyles.module.css"
 import {useState} from 'react'
 
 // example component:
@@ -8,13 +9,13 @@ function Square() {
 
 	if (checked) {
 		return (
-			<div onClick = {() => setIsChecked(false)} className = "w-10 h-10 border-black border-2 "> 
+			<div onClick = {() => setIsChecked(false)} className = {styles.square}> 
 				X
 			</div>
 		)
 	} else {
 		return (
-			<div onClick = {() => setIsChecked(true)} className = "w-10 h-10 border-black border-2 "> 
+			<div onClick = {() => setIsChecked(true)} className = {styles.square}> 
 			</div>
 		)
 	}
@@ -33,21 +34,21 @@ function Board() {
 	return (
 		<div>
 			{/* first row */}
-			<div className = "flex flex-row" >
+			<div className = {styles.squareContainer} >
 				<Square />
 				<Square />
 				<Square />
 			</div>
 			{/* end of first row */}
 			{/* second row */}
-			<div className = "flex flex-row" >
+			<div className = {styles.squareContainer} >
 				<Square />
 				<Square />
 				<Square />
 			</div>
 			{/* end of second row */}
 			{/* third row */}
-			<div className = "flex flex-row" >
+			<div className = {styles.squareContainer} >
 				<Square />
 				<Square />
 				<Square />
